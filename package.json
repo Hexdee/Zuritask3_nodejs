@@ -1,0 +1,23 @@
+{
+  "name": "zuritask3_nodejs",
+  "version": "1.0.0",
+  "description": "A crud app",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hexdee/Zuritask3_nodejs.git"
+  },
+  "author": "hexdee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hexdee/Zuritask3_nodejs/issues"
+  },
+  "homepage": "https://github.com/Hexdee/Zuritask3_nodejs#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}
