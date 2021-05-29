@@ -4,7 +4,8 @@
   "description": "A crud app",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,9 @@
   "homepage": "https://github.com/Hexdee/Zuritask3_nodejs#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "mongoose": "^5.12.12"
+  },
+  "devDependencies": {
     "nodemon": "^2.0.7"
   }
 }
