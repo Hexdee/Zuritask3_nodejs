@@ -1,5 +1,5 @@
 # Heroku link 
-https://crud-app111.herokuapp.com/
+https://crud-app111.herokuapp.com/infos
 
 # A CRUD app with database
 
