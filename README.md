@@ -73,7 +73,7 @@ The usage of the REST API is described below.
 }
 
 
-## Attempt to change a Thing using invalid params
+## Update a user info
 
 ### Request
 
