@@ -10,7 +10,8 @@ const connectionString = "mongodb://Hexdee:hexdee@cluster0-shard-00-00.o8ekz.mon
 mongoose.connect(connectionString, {
       useNewUrlParser: true,
       useFindAndModify: false,
-      useUnifiedTopology: true
+      useUnifiedTopology: true,
+	useCreateIndex: true
     }, (err) => {
         if (err) {
             console.log(err)
@@ -43,7 +44,6 @@ app.post('/infos', (req, res) => {
         name: req.body.name,
         country: req.body.country,
         email: req.body.email
-    })
 }, (err, newInfo) => {
     if(err) {
         return res.status(500).json({message: err})
@@ -51,6 +51,7 @@ app.post('/infos', (req, res) => {
     else {
         return res.status(200).json({message: "new Info saved", newInfo})
     }
+})
 })
 
 app.get('/infos', (req, res) => {
@@ -63,7 +64,7 @@ app.get('/infos', (req, res) => {
     })
 })
 
-app.get('/infos', (req, res) => {
+app.get('/infos/:id', (req, res) => {
     Info.findOne({_id: req.params.id}, (err, info) => {
         if (err) {
             return res.status(500).json({message: err})
@@ -75,7 +76,7 @@ app.get('/infos', (req, res) => {
     })
 })
 
-app.put('/infos:id', (req, res) => {
+app.put('/infos/:id', (req, res) => {
     	Info.findByIdAndUpdate(req.params.id, {
 		name: req.body.name,
 	    country: req.body.country,
@@ -109,5 +110,4 @@ app.delete('/infos/:id', (req, res) => {
 
 
 app.listen(4000, () => {
-  console.log("Server is running on port 4000");
-});
+  console.log("Server is running on port 4000");})
