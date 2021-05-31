@@ -1,5 +1,6 @@
-# Heroku link 
-https://crud-app111.herokuapp.com/infos
+# Heroku base link 
+https://crud-app111.herokuapp.com
+Set to get all user info
 
 # A CRUD app with database
 

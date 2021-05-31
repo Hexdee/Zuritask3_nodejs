@@ -110,6 +110,16 @@ app.delete('/infos/:id', (req, res) => {
     })
 })
 
+app.get('/', (req, res) => {
+    Info.find({}, (err, infos) => {
+        if(err) {
+            return res.status(500).json({message: err})
+        } else {
+            return res.status(200).json({infos})
+        }
+    })
+})
+
 
 app.listen(port, () => {
   console.log("Server is running on port", port);})
